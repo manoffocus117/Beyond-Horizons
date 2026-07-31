@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+@plugin "daisyui" {
+      themes: light --preferlight;
+}
+
+@plugin "daisyui/theme" {
+      name: "light";
+      default: true;
+      --color-accent: #f9a51a;
+}
+
+input::placeholder {
+      color: #ffffff;
+}
+
+.primary-font {
+      font-family: "Bebas Neue", sans-serif;
+}
+
+.secondary-font {
+      font-family: "Montserrat", sans-serif;
+}
+
+.hero {
+      position: relative;
+      height: 100vh;
+      background-image: url("../src/assets/Coxs-Bazar.jpg");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+}
+
+.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6); /* Black overlay */
+}
