@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 
 const Header = () => {
       return (
-            <header className="w-11/12 mx-auto absolute top-0">
+            <header className="w-11/12 mx-auto fixed top-0 left-0 right-0 z-10">
                   <nav className="navbar items-center">
                         <div className="navbar-start gap-20 h-20">
                               <img src={Logo} alt="" className="h-full" />
