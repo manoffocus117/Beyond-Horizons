@@ -17,6 +17,7 @@ const Slider = () => {
       return (
             <>
                   <Swiper
+                        loop={true}
                         pagination={{ clickable: true }}
                         autoplay={true}
                         modules={[Pagination, Autoplay]}
