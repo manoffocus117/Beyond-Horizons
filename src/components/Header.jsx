@@ -1,6 +1,6 @@
 import React from "react";
-import Logo_white from "../assets/logo_white.svg";
-import Logo_black from "../assets/logo_black.svg";
+import Logo_black from "../assets/logo_1.svg";
+import Logo_white from "../assets/logo_2.svg";
 import { Link, NavLink, useLocation } from "react-router";
 
 const Header = () => {
