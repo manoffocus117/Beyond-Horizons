@@ -1,28 +1,32 @@
 import React from "react";
-import Logo_white from "../assets/logo.svg";
+import Logo_white from "../assets/logo_white.svg";
 import Logo_black from "../assets/logo_black.svg";
 import { useLocation } from "react-router";
 
 const Header = () => {
       const location = useLocation();
-      console.log(location.pathname);
       return (
             <header className="w-11/12 mx-auto fixed top-0 left-0 right-0 z-10">
                   <nav className="navbar items-center">
                         <div className="navbar-start gap-20 h-20">
                               <img
                                     src={
-                                          location.pathname == "login" ||
-                                          "register"
+                                          location.pathname === "/login" ||
+                                          location.pathname === "/register"
                                                 ? Logo_black
                                                 : Logo_white
                                     }
                                     alt="logo"
-                                    className="h-full"
+                                    className="h-full text-white"
                               />
                               {/* searchbar */}
                               <label
-                                    className={`input w-92.5 bg-transparent secondary-font text-[1rem] border ${location.pathname == "login" || "register" ? "border-black" : "border-white"} outline-none`}
+                                    className={`input w-92.5 bg-transparent secondary-font text-[1rem] border ${
+                                          location.pathname === "/login" ||
+                                          location.pathname === "/register"
+                                                ? "border-black"
+                                                : "border-white"
+                                    } outline-none`}
                               >
                                     <svg
                                           className="h-[1em] opacity-100 text-white"
@@ -48,13 +52,25 @@ const Header = () => {
                                           type="search"
                                           required
                                           placeholder="Search your Destination..."
-                                          className={`${location.pathname == "login" || "register" ? "text-black" : "text-white"}`}
+                                          className={`${
+                                                location.pathname ===
+                                                      "/login" ||
+                                                location.pathname ===
+                                                      "/register"
+                                                      ? "text-black"
+                                                      : "text-white"
+                                          }`}
                                     />
                               </label>
                         </div>
                         <div className="navbar-end gap-20">
                               <menu
-                                    className={`${location.pathname == "login" || "register" ? "text-black" : "text-white"} text-[1rem] flex gap-20 secondary-font`}
+                                    className={`${
+                                          location.pathname === "/login" ||
+                                          location.pathname === "/register"
+                                                ? "text-black"
+                                                : "text-white"
+                                    } text-[1rem] flex gap-20 secondary-font`}
                               >
                                     <li>News</li>
                                     <li>Destination</li>

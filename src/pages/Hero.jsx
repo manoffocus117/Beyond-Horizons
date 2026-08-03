@@ -8,12 +8,12 @@ import "swiper/css/pagination";
 import Slider_img_1 from "../assets/Coxs-Bazar.jpg";
 import Slider_img_2 from "../assets/sajek.jpg";
 import Slider_img_3 from "../assets/sreemangal.jpg";
-import Slider_img_4 from "../assets/sundarban.jpg";
+import Slider_img_4 from "../assets/sundarbans.jpg";
 import Slider_img_5 from "../assets/kuakata.jpg";
 
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const Slider = () => {
+const Hero = () => {
       return (
             <>
                   <Swiper
@@ -125,4 +125,4 @@ const Slider = () => {
       );
 };
 
-export default Slider;
+export default Hero;
