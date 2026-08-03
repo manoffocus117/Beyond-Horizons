@@ -74,7 +74,7 @@ const Header = () => {
                                           location.pathname === "/register"
                                                 ? "text-black"
                                                 : "text-white"
-                                    } text-[1rem] flex gap-20 secondary-font`}
+                                    } text-[1rem] flex items-center gap-20 secondary-font font-medium`}
                               >
                                     <NavLink to={"/news"}>News</NavLink>
                                     <NavLink to={"/destination"}>

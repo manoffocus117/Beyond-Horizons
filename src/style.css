@@ -22,9 +22,10 @@ input::placeholder {
       font-family: "Montserrat", sans-serif;
 }
 
-a .active {
+.active {
       background: var(--color-accent);
-      padding: 5px 10px;
+      color: #000000;
+      padding: 12px 24px;
       border-radius: 5px;
 }
 
