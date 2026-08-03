@@ -22,6 +22,12 @@ input::placeholder {
       font-family: "Montserrat", sans-serif;
 }
 
+a .active {
+      background: var(--color-accent);
+      padding: 5px 10px;
+      border-radius: 5px;
+}
+
 .hero {
       position: relative;
       overflow: hidden;

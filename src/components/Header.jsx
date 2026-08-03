@@ -1,7 +1,7 @@
 import React from "react";
 import Logo_white from "../assets/logo_white.svg";
 import Logo_black from "../assets/logo_black.svg";
-import { useLocation } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 
 const Header = () => {
       const location = useLocation();
@@ -9,16 +9,20 @@ const Header = () => {
             <header className="w-11/12 mx-auto fixed top-0 left-0 right-0 z-10">
                   <nav className="navbar items-center">
                         <div className="navbar-start gap-20 h-20">
-                              <img
-                                    src={
-                                          location.pathname === "/login" ||
-                                          location.pathname === "/register"
-                                                ? Logo_black
-                                                : Logo_white
-                                    }
-                                    alt="logo"
-                                    className="h-full text-white"
-                              />
+                              <Link to="/" className="h-full">
+                                    <img
+                                          src={
+                                                location.pathname ===
+                                                      "/login" ||
+                                                location.pathname ===
+                                                      "/register"
+                                                      ? Logo_black
+                                                      : Logo_white
+                                          }
+                                          alt="logo"
+                                          className="h-full"
+                                    />
+                              </Link>
                               {/* searchbar */}
                               <label
                                     className={`input w-92.5 bg-transparent secondary-font text-[1rem] border ${
@@ -72,14 +76,19 @@ const Header = () => {
                                                 : "text-white"
                                     } text-[1rem] flex gap-20 secondary-font`}
                               >
-                                    <li>News</li>
-                                    <li>Destination</li>
-                                    <li>Blog</li>
-                                    <li>Contact</li>
+                                    <NavLink to={"/news"}>News</NavLink>
+                                    <NavLink to={"/destination"}>
+                                          Destination
+                                    </NavLink>
+                                    <NavLink to={"/blog"}>Blog</NavLink>
+                                    <NavLink to={"/contact"}>Contact</NavLink>
                               </menu>
-                              <button className="bg-accent secondary-font text-[1rem] font-medium px-6 py-3 rounded">
+                              <Link
+                                    to={"/login"}
+                                    className="bg-accent secondary-font text-[1rem] font-medium px-6 py-3 rounded"
+                              >
                                     Login
-                              </button>
+                              </Link>
                         </div>
                   </nav>
             </header>
