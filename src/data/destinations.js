@@ -1,5 +1,5 @@
 import Coxs_bazar from "../assets/Coxs-Bazar.jpg";
-import Sajek from "../assets/Sajek.jpg";
+import Sajek from "../assets/sajek.jpg";
 import Sreemangal from "../assets/sreemangal.jpg";
 import Sundarbans from "../assets/sundarbans.jpg";
 import Kuakata from "../assets/kuakata.jpg";
