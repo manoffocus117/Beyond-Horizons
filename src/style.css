@@ -10,18 +10,6 @@
       --color-accent: #f9a51a;
 }
 
-*,
-::before,
-::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-}
-
-input::placeholder {
-      color: #ffffff;
-}
-
 .primary-font {
       font-family: "Bebas Neue", sans-serif;
 }
@@ -98,7 +86,7 @@ body {
 
 .card-slider .swiper-slide-thumb-active {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-      border: 3px solid #f5a623;
+      border: 3px solid var(--color-accent);
       border-radius: 10px;
 }
 
@@ -130,7 +118,7 @@ body {
 }
 
 .nav-btn:hover {
-      background: #f5a623;
+      background: var(--color-accent);
       color: #fff;
       transform: scale(1.05);
 }

@@ -12,12 +12,9 @@ const Header = () => {
                               <Link to="/" className="h-full">
                                     <img
                                           src={
-                                                location.pathname ===
-                                                      "/login" ||
-                                                location.pathname ===
-                                                      "/register"
-                                                      ? Logo_black
-                                                      : Logo_white
+                                                (location.pathname === "/" &&
+                                                      Logo_white) ||
+                                                Logo_black
                                           }
                                           alt="logo"
                                           className="h-full"
@@ -26,14 +23,13 @@ const Header = () => {
                               {/* searchbar */}
                               <label
                                     className={`input w-92.5 bg-transparent secondary-font text-[1rem] border ${
-                                          location.pathname === "/login" ||
-                                          location.pathname === "/register"
-                                                ? "border-black"
-                                                : "border-white"
+                                          (location.pathname === "/" &&
+                                                "border-white text-black") ||
+                                          "border-black"
                                     } outline-none`}
                               >
                                     <svg
-                                          className="h-[1em] opacity-100 text-white"
+                                          className={`h-4 opacity-100 ${location.pathname === "/" && "text-white"} || text-black`}
                                           xmlns="http://www.w3.org/2000/svg"
                                           viewBox="0 0 24 24"
                                     >
@@ -57,12 +53,9 @@ const Header = () => {
                                           required
                                           placeholder="Search your Destination..."
                                           className={`${
-                                                location.pathname ===
-                                                      "/login" ||
-                                                location.pathname ===
-                                                      "/register"
-                                                      ? "text-black"
-                                                      : "text-white"
+                                                (location.pathname === "/" &&
+                                                      "text-white placeholder:text-white") ||
+                                                "text-black placeholder:text-black"
                                           }`}
                                     />
                               </label>
@@ -70,10 +63,9 @@ const Header = () => {
                         <div className="navbar-end gap-20">
                               <menu
                                     className={`${
-                                          location.pathname === "/login" ||
-                                          location.pathname === "/register"
-                                                ? "text-black"
-                                                : "text-white"
+                                          (location.pathname === "/" &&
+                                                "text-white") ||
+                                          "text-black"
                                     } text-[1rem] flex items-center gap-20 secondary-font font-medium`}
                               >
                                     <NavLink to={"/news"}>News</NavLink>
