@@ -41,15 +41,6 @@ body {
       z-index: 1;
 }
 
-.background-slide::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 2;
-      pointer-events: none;
-}
-
 .background-slide .swiper-slide img {
       width: 100%;
       height: 100%;

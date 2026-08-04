@@ -5,6 +5,7 @@ import { Autoplay, Navigation, Pagination, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Hero = () => {
       const [thumb_swiper, set_thumb_swiper] = useState(null);
@@ -29,8 +30,21 @@ const Hero = () => {
                         className="background-slide"
                   >
                         {destinations.map((item) => (
-                              <SwiperSlide key={item.id}>
+                              <SwiperSlide key={item.id} className="relative">
                                     <img src={item.image} alt={item.title} />
+                                    <div className="absolute inset-0 bg-black/50 z-10"></div>
+                                    <div className="absolute z-[999] top-[35%] left-[5%] w-5/12 flex flex-col gap-5 items-start">
+                                          <h1 className="text-8xl text-white primary-font -mb-5">
+                                                {item.title}
+                                          </h1>
+                                          <p className="text-[1rem] secondary-font text-white">
+                                                {item.description}
+                                          </p>
+                                          <button className="flex items-center gap-2 bg-accent secondary-font text-[1rem] font-medium px-6 py-3 rounded">
+                                                Booking
+                                                <FaArrowRightLong />
+                                          </button>
+                                    </div>
                               </SwiperSlide>
                         ))}
                   </Swiper>
@@ -87,8 +101,12 @@ const Hero = () => {
                         onSwiper={set_thumb_swiper}
                   >
                         {destinations.map((item) => (
-                              <SwiperSlide key={item.id}>
-                                    <img src={item.image} alt="" />
+                              <SwiperSlide key={item.id} className="relative ">
+                                    <img src={item.image} alt={item.title} />
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent rounded-[10px]"></div>
+                                    <h1 className="text-4xl text-white primary-font absolute bottom-5 left-5">
+                                          {item.title}
+                                    </h1>
                               </SwiperSlide>
                         ))}
                   </Swiper>
