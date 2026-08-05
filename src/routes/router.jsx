@@ -8,6 +8,7 @@ import News from "../pages/News";
 import Destination from "../pages/Destination";
 import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
       {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
                   {
                         path: "/contact",
                         element: <Contact />,
+                  },
+                  {
+                        path: "/register",
+                        element: <Register />,
                   },
             ],
       },
