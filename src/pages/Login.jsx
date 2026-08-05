@@ -1,6 +1,6 @@
 import React from "react";
-import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
+import Continue_with from "../components/Continue_with";
 
 const Login = () => {
       return (
@@ -66,17 +66,7 @@ const Login = () => {
                               </Link>
                         </p>
                   </form>
-                  <div className="divider w-130 mx-auto secondary-font my-10">
-                        OR
-                  </div>
-                  <div className="flex flex-col gap-2 w-110">
-                        <button className="btn bg-white secondary-font rounded-full">
-                              <FaFacebook /> Continue with Facebook
-                        </button>
-                        <button className="btn bg-white secondary-font rounded-full">
-                              <FaGoogle /> Continue with Google
-                        </button>
-                  </div>
+                  <Continue_with />
             </section>
       );
 };
